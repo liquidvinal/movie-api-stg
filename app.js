@@ -1,4 +1,5 @@
 var express = require("express");
+var morgan = require("morgan");
 var app = express();
 var request = require("request");
 var mongoose = require("mongoose");
@@ -11,7 +12,7 @@ var Movie = require("./models/movie");
 // connect to db
 
 mongoose.connect(
-  "mongodb+srv://asimnasm:IWevfj7MAdqLcYBT@cluster0-lyfyh.mongodb.net/test?retryWrites=true&w=majority",
+  "mongodb+srv://asimnasm:oqXdff9l7Ej9ahdX@cluster0-lyfyh.mongodb.net/test?retryWrites=true&w=majority",
   err => {
     if (err) {
       console.log(err);
@@ -20,6 +21,9 @@ mongoose.connect(
     }
   }
 );
+
+// add morgan to track
+app.use(morgan("dev"));
 // AdminBro route only as it crashes if we put it after the middleware
 var adminRoutes = require("./routes/admin");
 app.use("/admin", adminRoutes);
