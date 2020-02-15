@@ -1,0 +1,24 @@
+{
+  "name": "imdb-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "admin-bro": "^1.6.2",
+    "admin-bro-expressjs": "^0.4.0",
+    "admin-bro-mongoose": "^0.4.0",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "express-formidable": "^1.2.0",
+    "express-session": "^1.17.0",
+    "mongoose": "^5.8.9",
+    "request": "^2.88.0"
+  }
+}
