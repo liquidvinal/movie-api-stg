@@ -30,7 +30,7 @@ var adminRoutes = require("./routes/admin");
 app.use("/admin", adminRoutes);
 
 //middleware
-
+app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -38,6 +38,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 
 // Routes
+
+var categoryRoutes = require("./routes/category");
+
+app.use(categoryRoutes);
 
 app.get("/", (req, res) => {
   res.render("search");

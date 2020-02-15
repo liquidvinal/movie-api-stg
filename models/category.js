@@ -7,6 +7,10 @@ var CategorySchema = new Schema({
     required: true,
     unique: true,
     lowercase: true
+  },
+  picture: {
+    type: String,
+    required: true
   }
 });
 
