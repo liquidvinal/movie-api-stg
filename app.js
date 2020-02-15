@@ -8,6 +8,7 @@ var bodyParser = require("body-parser");
 // models ref
 var Category = require("./models/category");
 var Movie = require("./models/movie");
+var Actor = require("./models/actors");
 
 // connect to db
 
