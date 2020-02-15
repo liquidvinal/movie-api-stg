@@ -18,6 +18,7 @@
     "express": "^4.17.1",
     "express-formidable": "^1.2.0",
     "express-session": "^1.17.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.8.9",
     "morgan": "^1.9.1",
     "request": "^2.88.0"

@@ -2,10 +2,12 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var ActorSchema = new Schema({
-  movies: {
-    type: Schema.Types.ObjectId,
-    ref: "Movie"
-  },
+  movies: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Movie"
+    }
+  ],
   name: {
     type: String,
     required: true,

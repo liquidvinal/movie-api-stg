@@ -41,8 +41,10 @@ app.set("view engine", "ejs");
 
 var categoryRoutes = require("./routes/category");
 var omdbapiRoutes = require("./routes/omdbapi");
+var actorsRoutes = require("./routes/actors");
 
 app.use(categoryRoutes);
 app.use(omdbapiRoutes);
+app.use(actorsRoutes);
 
 app.listen(3000, () => console.log("Server Up and running"));

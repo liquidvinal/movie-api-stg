@@ -6,6 +6,12 @@ var MovieSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: "Category"
   },
+  actor: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Actor"
+    }
+  ],
   title: {
     type: String,
     required: true,
