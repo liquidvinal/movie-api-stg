@@ -40,23 +40,9 @@ app.set("view engine", "ejs");
 // Routes
 
 var categoryRoutes = require("./routes/category");
+var omdbapiRoutes = require("./routes/omdbapi");
 
 app.use(categoryRoutes);
-
-app.get("/", (req, res) => {
-  res.render("search");
-});
-
-app.get("/results", (req, res) => {
-  var query = req.query.search;
-  var url = "http://www.omdbapi.com/?s=" + query + "&apikey=thewdb";
-  request(url, (error, response, body) => {
-    if (!error && response.statusCode == 200) {
-      var data = JSON.parse(body);
-      // res.send(results["Search"][0]);
-      res.render("results", { data: data, query: query });
-    }
-  });
-});
+app.use(omdbapiRoutes);
 
 app.listen(3000, () => console.log("Server Up and running"));

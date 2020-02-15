@@ -11,6 +11,10 @@ var CategorySchema = new Schema({
   picture: {
     type: String,
     required: true
+  },
+  description: {
+    type: String,
+    required: true
   }
 });
 
