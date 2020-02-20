@@ -5,8 +5,9 @@
 replicaCount: 3
 
 image:
-  repository: "samour/movieapi2"
-  pullPolicy: IfNotPresent
+  repository: "samour/movieapi2:latest"
+  imagePullPolicy: Always
+
 
 imagePullSecrets: []
 nameOverride: ""
@@ -14,7 +15,7 @@ fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
-  create: true
+  create: false
   # Annotations to add to the service account
   annotations: {}
   # The name of the service account to use.
@@ -33,8 +34,9 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
+  name: movie-api
   type: ClusterIP
-  port: 80
+  port: 8078
 
 ingress:
   enabled: false
