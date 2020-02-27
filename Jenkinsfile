@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-    label 'docker'
-    }
+    agent any
     environment {
         PROJECT_ID = 'new-pro-267315'
         CLUSTER_NAME = 'movie-api'
@@ -9,6 +7,11 @@ pipeline {
         CREDENTIALS_ID = 'gke'
     }
     stages {
+        stage('Initialize'){
+        def dockerHome = tool 'MyDocker'
+        env.PATH = "${dockerHome}/bin:${env.PATH}"
+            }
+
         stage("Checkout code") {
             steps {
                 checkout scm
