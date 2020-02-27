@@ -47,4 +47,6 @@ app.use(categoryRoutes);
 app.use(omdbapiRoutes);
 app.use(actorsRoutes);
 
-app.listen(3000, () => console.log("Server Up and running"));
+var server = app.listen(process.env.port || 3000, function () {
+  console.log("Listening on port %s...", server.address().port);
+});;
