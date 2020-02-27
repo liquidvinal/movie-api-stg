@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "npm app.js",
-    "stop": "npm stopall"
+    "stop": "npm stop"
   },
   "author": "",
   "license": "ISC",
