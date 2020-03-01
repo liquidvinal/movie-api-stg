@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:7-alpine' }
+    }
     environment {
         PROJECT_ID = 'new-pro-267315'
         CLUSTER_NAME = 'movie-api'
