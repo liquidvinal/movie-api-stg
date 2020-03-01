@@ -15,7 +15,7 @@ pipeline {
         stage("Build image") {
             steps {
                 script {
-                    myapp = docker.build("liquidvinal/movieapi2:${env.BUILD_ID}")
+                    myapp = docker.build("samour/movieapi2:${env.BUILD_ID}")
                 }
             }
         }
